@@ -1,24 +1,7 @@
-const removeFromArray = function (
-  nums,
-  firstElementToRemove,
-  ...anyOtherElements
-) {
-  const toRemoveSet = new Set();
-  toRemoveSet.add(firstElementToRemove);
-  for (const e of anyOtherElements) {
-    toRemoveSet.add(e);
-  }
-
-  let arrToReturn = [];
-
-  for (i = 0; i < nums.length; i++) {
-    if (toRemoveSet.has(nums[i])) {
-      continue;
-    }
-
-    arrToReturn.push(nums[i]);
-  }
-
+const removeFromArray = function (arr, ...elementsToRemove) {
+  // Create a set from elementsToRemove
+  const thingsToRemove = new Set(elementsToRemove);
+  const arrToReturn = arr.filter((e) => !thingsToRemove.has(e));
   return arrToReturn;
 };
 

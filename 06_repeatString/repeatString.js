@@ -1,13 +1,11 @@
 const repeatString = function (toRepeat, timesToRepeat) {
-  if (timesToRepeat < 0) {
-    return "ERROR";
-  }
+  if (timesToRepeat < 0) return "ERROR";
 
-  stringToReturn = "";
+  let toReturn = "";
   for (let i = 0; i < timesToRepeat; i++) {
-    stringToReturn += toRepeat;
+    toReturn += toRepeat;
   }
-  return stringToReturn;
+  return toReturn;
 };
 
 // Do not edit below this line

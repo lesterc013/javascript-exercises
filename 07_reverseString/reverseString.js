@@ -1,10 +1,12 @@
-const reverseString = function (toReverse) {
-  let lastIndex = toReverse.length - 1;
-  reversed = "";
+const reverseString = function (str) {
+  let reversed = "";
 
-  for (i = lastIndex; i >= 0; i--) {
-    reversed += toReverse[i];
+  // Iterate from back of the string to the front
+  for (let i = str.length - 1; i >= 0; i--) {
+    // Concat each element to a variable
+    reversed += str[i];
   }
+  // Return that variable
   return reversed;
 };
 
